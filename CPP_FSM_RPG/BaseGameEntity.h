@@ -13,6 +13,6 @@ public:
 	virtual ~BaseGameEntity() {}
 
 	virtual void Update() abstract;
-	int iD() const { return m_nID; }
+	int ID() const { return m_nID; }
 };
 
