@@ -9,7 +9,7 @@ int main()
 	
 	Player player(ent_Player_Elsa);
 
-	for (int i = 0; 20 > i; i++)
+	for (int i = 0; 30 > i; i++)
 	{
 		player.Update();
 

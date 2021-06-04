@@ -55,10 +55,14 @@ public:
 
 	bool Thirsty() const;
 	void VisitGuildAndDrink() { m_nThirst = 0; m_nMoneyInBank -= 2; }
+	void VisitGuildAndDrink(int i) { m_nThirst = 0; m_nGoldCarried -= 2; }
+	void DrinkWater() { m_nThirst = 0; }
 
+	int WeaponStatus() const { return m_nWeaponDurability; }
 	void SetWeaponDurability(const int& value) { m_nWeaponDurability = value; }
 	void DecreaseDruability() { m_nWeaponDurability--; }
 	void FixWeapon() { m_nWeaponDurability = WEAPON_DURABILITY; m_nMoneyInBank -= 2; }
+	void FixWeapon(int i) { m_nWeaponDurability = WEAPON_DURABILITY; m_nGoldCarried -= 2; }
 	bool ZeroDurability() const;
 };
 
